@@ -32,6 +32,8 @@ After a specified number of training steps (Epoch) the Agent is evaluated. The e
 # Final Evaluation
 After training, the final agent was evaluated using the standard 0.1% trading fee. In 50 Evaluation episodes, the average Agent`s performance was on average **30%** better than the Buy And Hold strategy.
   
+T-Test was conducted to determine the statistical significance of the results. The p-value against the null hypothesis that the Buy&Hold strategy is better than the RL Agent is **0.000006**.
+  
  <p align="center"><img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/boxplot-final-vs-bah-ratio.png" alt="drawing" width="500"/>
 
 <p align="center"><img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/boxplot-final-ratio.png" alt="drawing" width="500"/>

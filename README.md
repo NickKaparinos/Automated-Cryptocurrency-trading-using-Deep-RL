@@ -22,7 +22,7 @@ Then, the Timeseries embeddings are concatenated together, as well as with the p
 Finally, MLP Head networks map the state embedding to the Q and V values.
   
 # Evaluation
-After a specified number of training steps (Epoch) the Agent is evaluated. The evaluation episode is 1000 Timesteps long. The agent was trained and evaluated without trading fees. However, the final evaluation was conducted using the standard 0.1% trading fee. Surprisingly, this training regime resulted in the optimal performance. The best way to evaluate trading agents is against the naive method called Buy And Hold (B&H). This comparison provides a more accuracy estimation of the agent`s performance, since it is mostly aleviated of the effect of the market trend throughout the evaluation episode. The following plots depict the Agent`s performance after each training Epoch.
+After a specified number of training steps (Epoch) the Agent is evaluated. The evaluation episode is 1000 Timesteps long. The agent was trained and evaluated without trading fees. However, the final evaluation was conducted using the standard 0.1% trading fee. Surprisingly, this training regime resulted in the optimal performance. The best way to evaluate trading agents is against the naive method called Buy And Hold (B&H). This comparison provides a more accuracy estimation of the agent\`s performance, since it is mostly aleviated of the effect of the market trend throughout the evaluation episode. The following plots depict the Agent`s performance after each training Epoch.
   
 
 <p align="center"><img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/epoch_bah_boxplot_distribution-final.png" alt="drawing" width="500"/>
@@ -30,9 +30,9 @@ After a specified number of training steps (Epoch) the Agent is evaluated. The e
 <p align="center"><img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/epoch_boxplot_distribution-final.png" alt="drawing" width="500"/>
   
 # Final Evaluation
-After training, the final agent was evaluated using the standard 0.1% trading fee. In 50 Evaluation episodes, the average Agent`s performance was on average **30%** better than the Buy And Hold strategy.
+After training, the final agent was evaluated using the standard 0.1% trading fee. In 50 Evaluation episodes, the average Agent\`s performance was on average **30%** better than the Buy And Hold strategy.
   
-T-Test was conducted to determine the statistical significance of the results. The p-value against the null hypothesis that the Buy&Hold strategy is better than the RL Agent is **0.000006**.
+T-Test was conducted to determine the statistical significance of the results. The p-value against the null hypothesis that the Buy And Hold strategy is better than the RL Agent is **0.000006**.
   
  <p align="center"><img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/boxplot-final-vs-bah-ratio.png" alt="drawing" width="500"/>
 

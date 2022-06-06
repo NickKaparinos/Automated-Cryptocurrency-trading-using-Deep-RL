@@ -46,6 +46,7 @@ T-Test was conducted to determine the statistical significance of the results. T
   
   <img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/test_episode-0-reward.png" width="32.9%" />
    <img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/test_episode-0-reward-per-series.png" width="32.9%" />
+   
 ## Final Evaluation Episode 2
    
    <p align="center"><img src="https://github.com/NickKaparinos/Automated-Cryptocurrency-trading-using-Deep-RL/blob/master/Results/test_episode-1-actions.png" alt="drawing"/>

@@ -52,7 +52,7 @@ def main():
                   **epsilon_schedule_hyperparameters, **replay_buffer_hyperparameters, **env_kwargs, **misq_dict)
 
     # Logging
-    model_name = f'{config["algorithm"]}_' + str(time.strftime('%d_%b_%Y_%H_%M_%S', time.localtime()))
+    model_name = f'{config["algorithm"]}_{time.strftime("%d_%b_%Y_%H_%M_%S", time.localtime())}'
     log_dir = f'logs/trading/{env_id[:-3]}/{model_name}/'
     makedirs(log_dir, exist_ok=True)
     project = 'Gym-' + env_id[:-3]

@@ -3,6 +3,7 @@ Automatic Cryptocurrency trading using Deep RL
 Nick Kaparinos
 2022
 """
+
 import gym
 import numpy as np
 from os import makedirs
@@ -18,7 +19,7 @@ from utilities import save_list_to_txt
 class TradeEnv(gym.Env):
     """ Crypto trading environment """
     reward_range = (-float('inf'), float('inf'))
-    metadata = {'render.modes': ['human']}
+    metadata = {'render.modes': None}
 
     def __init__(self, crypto_files=(), timeseries_step='m', test=False, n_previous_timesteps=5, max_episode_steps=500):
         super().__init__()
@@ -238,7 +239,8 @@ class TestTradeEnv(TradeEnv):
         ending_stock_prices = self.data.iloc[
             self.episode_starting_step + self.max_episode_steps, close_columns_numbers].values
         self.bah_ending_value = (
-                self.starting_balance / 4 * (ending_stock_prices / (starting_stock_prices * (1 + self.fee)))).sum()
+                self.starting_balance / self.n_timeseries * (
+                    ending_stock_prices / (starting_stock_prices * (1 + self.fee)))).sum()
 
         # Reset epoch episode counter
         if self.episode == self.num_test_episodes:
@@ -249,8 +251,7 @@ class TestTradeEnv(TradeEnv):
             makedirs(f'{self.log_dir}epoch-{self.epoch}', exist_ok=True)
         return obs
 
-    def _save_episode_results(
-            self):  # Save episode total ending portfolio and maybe violin/histogram plot, do plot with all violins
+    def _save_episode_results(self):
         """ Plot timeseries and agent`s actions. Then save the figure """
 
         # Agents actions plot
